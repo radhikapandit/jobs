@@ -474,7 +474,160 @@ footer {
 
     </div>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury FAQ - Playboy Jobs</title>
 
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000, #0f172a);
+    color: #fff;
+}
+
+/* SECTION */
+.faq-section {
+    max-width: 900px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.faq-title {
+    text-align: center;
+    font-size: 32px;
+    color: gold;
+    margin-bottom: 30px;
+}
+
+/* FAQ BOX */
+.faq {
+    background: rgba(255,255,255,0.05);
+    border-radius: 15px;
+    margin-bottom: 15px;
+    border: 1px solid rgba(255,215,0,0.3);
+    backdrop-filter: blur(12px);
+    overflow: hidden;
+    transition: 0.3s;
+}
+
+.faq:hover {
+    box-shadow: 0 0 15px gold;
+}
+
+/* QUESTION */
+.faq-question {
+    padding: 18px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    position: relative;
+}
+
+.faq-question::after {
+    content: "+";
+    position: absolute;
+    right: 20px;
+    font-size: 20px;
+    color: gold;
+}
+
+/* ANSWER */
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 20px;
+    color: #ddd;
+    line-height: 1.6;
+    transition: max-height 0.4s ease;
+}
+
+/* ACTIVE */
+.faq.active .faq-answer {
+    max-height: 200px;
+    padding: 15px 20px;
+}
+
+.faq.active .faq-question::after {
+    content: "-";
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="faq-section">
+
+<h2 class="faq-title">💎 Playboy Jobs - FAQ</h2>
+
+<div class="faq">
+    <div class="faq-question">What are Playboy Jobs?</div>
+    <div class="faq-answer">Playboy jobs refer to premium lifestyle opportunities involving companionship, social presence, and professional interaction with clients.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">Are Playboy Jobs legal?</div>
+    <div class="faq-answer">Playboy jobs operate in a sensitive category. Always check your local laws before applying to ensure compliance.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">What is the eligibility for Playboy Jobs?</div>
+    <div class="faq-answer">Candidates must be 18+, confident, well-groomed, and possess strong communication skills.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">How much can I earn from Playboy Jobs?</div>
+    <div class="faq-answer">Earnings depend on availability and experience, with many platforms offering high income potential.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">Are Playboy Jobs safe?</div>
+    <div class="faq-answer">Safety depends on the platform. Avoid paying upfront fees and protect your personal information.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">Do I need experience for Playboy Jobs?</div>
+    <div class="faq-answer">No prior experience is required, but confidence and communication skills are important.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">How can I apply for Playboy Jobs?</div>
+    <div class="faq-answer">You can apply online by filling out a form with your details and profile information.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">Are Playboy Jobs part-time?</div>
+    <div class="faq-answer">Yes, most Playboy jobs offer flexible working hours and can be part-time or full-time.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">What skills are needed for Playboy Jobs?</div>
+    <div class="faq-answer">Skills include communication, grooming, confidence, and social interaction abilities.</div>
+</div>
+
+<div class="faq">
+    <div class="faq-question">Are there fake Playboy Jobs?</div>
+    <div class="faq-answer">Yes, be cautious of scams. Avoid websites asking for registration fees or sensitive data.</div>
+</div>
+
+</section>
+
+<script>
+// Accordion
+const faqs = document.querySelectorAll(".faq");
+
+faqs.forEach(faq => {
+    faq.addEventListener("click", () => {
+        faq.classList.toggle("active");
+    });
+});
+</script>
+
+</body>
+</html>
 <footer>
     © 2026 Luxury India UI | Designed for Premium Experience
 </footer>
