@@ -323,6 +323,164 @@ footer {
             and availability directly.
         </p>
     </div>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury India Cities</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000000, #0f172a);
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px 20px;
+    background: linear-gradient(90deg, #000, #1a1a1a);
+    border-bottom: 1px solid rgba(255,215,0,0.3);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 34px;
+    color: gold;
+    letter-spacing: 2px;
+}
+
+header p {
+    color: #aaa;
+    margin-top: 5px;
+}
+
+/* GRID */
+.container {
+    padding: 30px;
+    max-width: 1300px;
+    margin: auto;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 18px;
+    padding: 25px;
+    border: 1px solid rgba(255,215,0,0.2);
+    backdrop-filter: blur(15px);
+    transition: 0.4s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow effect */
+.card::before {
+    content: "";
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, rgba(255,215,0,0.15), transparent);
+    top: -20%;
+    left: -20%;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 0 25px rgba(255,215,0,0.5);
+}
+
+/* TEXT */
+.city {
+    font-size: 20px;
+    font-weight: 600;
+    color: gold;
+}
+
+.state {
+    margin-top: 8px;
+    color: #ddd;
+    font-size: 15px;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 20px;
+    border-top: 1px solid rgba(255,215,0,0.3);
+    color: #aaa;
+    margin-top: 30px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>🇮🇳 Luxury India Cities</h1>
+    <p>Top 30 Major Cities – Premium Design</p>
+</header>
+
+<div class="container">
+    <div class="grid">
+
+        <div class="card"><div class="city">Mumbai</div><div class="state">Maharashtra</div></div>
+        <div class="card"><div class="city">Delhi</div><div class="state">Delhi</div></div>
+        <div class="card"><div class="city">Bengaluru</div><div class="state">Karnataka</div></div>
+        <div class="card"><div class="city">Hyderabad</div><div class="state">Telangana</div></div>
+        <div class="card"><div class="city">Ahmedabad</div><div class="state">Gujarat</div></div>
+        <div class="card"><div class="city">Chennai</div><div class="state">Tamil Nadu</div></div>
+        <div class="card"><div class="city">Kolkata</div><div class="state">West Bengal</div></div>
+        <div class="card"><div class="city">Pune</div><div class="state">Maharashtra</div></div>
+        <div class="card"><div class="city">Jaipur</div><div class="state">Rajasthan</div></div>
+        <div class="card"><div class="city">Lucknow</div><div class="state">Uttar Pradesh</div></div>
+        <div class="card"><div class="city">Kanpur</div><div class="state">Uttar Pradesh</div></div>
+        <div class="card"><div class="city">Nagpur</div><div class="state">Maharashtra</div></div>
+        <div class="card"><div class="city">Indore</div><div class="state">Madhya Pradesh</div></div>
+        <div class="card"><div class="city">Thane</div><div class="state">Maharashtra</div></div>
+        <div class="card"><div class="city">Bhopal</div><div class="state">Madhya Pradesh</div></div>
+        <div class="card"><div class="city">Visakhapatnam</div><div class="state">Andhra Pradesh</div></div>
+        <div class="card"><div class="city">Patna</div><div class="state">Bihar</div></div>
+        <div class="card"><div class="city">Vadodara</div><div class="state">Gujarat</div></div>
+        <div class="card"><div class="city">Ghaziabad</div><div class="state">Uttar Pradesh</div></div>
+        <div class="card"><div class="city">Ludhiana</div><div class="state">Punjab</div></div>
+        <div class="card"><div class="city">Agra</div><div class="state">Uttar Pradesh</div></div>
+        <div class="card"><div class="city">Nashik</div><div class="state">Maharashtra</div></div>
+        <div class="card"><div class="city">Faridabad</div><div class="state">Haryana</div></div>
+        <div class="card"><div class="city">Meerut</div><div class="state">Uttar Pradesh</div></div>
+        <div class="card"><div class="city">Rajkot</div><div class="state">Gujarat</div></div>
+        <div class="card"><div class="city">Varanasi</div><div class="state">Uttar Pradesh</div></div>
+        <div class="card"><div class="city">Srinagar</div><div class="state">Jammu & Kashmir</div></div>
+        <div class="card"><div class="city">Aurangabad</div><div class="state">Maharashtra</div></div>
+        <div class="card"><div class="city">Dhanbad</div><div class="state">Jharkhand</div></div>
+        <div class="card"><div class="city">Amritsar</div><div class="state">Punjab</div></div>
+
+    </div>
+</div>
+
+<footer>
+    © 2026 Luxury India UI | Designed for Premium Experience
+</footer>
+
+</body>
+</html>
 
 </section>
 
