@@ -792,6 +792,628 @@ document.querySelectorAll(".faq").forEach(faq=>{
 </html>
 </body>
 </html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Hiring Calculator</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000, #0f172a);
+    color: #fff;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 500px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255,215,0,0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(255,215,0,0.3);
+}
+
+/* TITLE */
+h2 {
+    text-align: center;
+    color: gold;
+}
+
+/* INPUT */
+label {
+    display: block;
+    margin-top: 15px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+
+/* BUTTON */
+button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(45deg, gold, orange);
+    border: none;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px gold;
+}
+
+/* RESULT */
+.result {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.suggestion {
+    margin-top: 10px;
+    color: #ddd;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>💎 Hiring Chance Calculator</h2>
+
+    <label>Age</label>
+    <input type="number" id="age" placeholder="Enter your age">
+
+    <label>Confidence Level</label>
+    <select id="confidence">
+        <option value="10">Low</option>
+        <option value="20">Medium</option>
+        <option value="30">High</option>
+    </select>
+
+    <label>Communication Skills</label>
+    <select id="communication">
+        <option value="10">Basic</option>
+        <option value="20">Good</option>
+        <option value="30">Excellent</option>
+    </select>
+
+    <label>Personality & Grooming</label>
+    <select id="personality">
+        <option value="10">Average</option>
+        <option value="20">Good</option>
+        <option value="30">Premium</option>
+    </select>
+
+    <button onclick="calculate()">Check Hiring Chance 🚀</button>
+
+    <div class="result" id="result"></div>
+    <div class="suggestion" id="suggestion"></div>
+</div>
+
+<script>
+function calculate() {
+    let age = document.getElementById("age").value;
+    let confidence = parseInt(document.getElementById("confidence").value);
+    let communication = parseInt(document.getElementById("communication").value);
+    let personality = parseInt(document.getElementById("personality").value);
+
+    let score = confidence + communication + personality;
+
+    // Age factor
+    if(age >= 18 && age <= 30) {
+        score += 20;
+    } else {
+        score += 10;
+    }
+
+    let result = document.getElementById("result");
+    let suggestion = document.getElementById("suggestion");
+
+    result.innerHTML = "🎯 Hiring Chance: " + score + "%";
+
+    // Suggestions
+    if(score >= 80) {
+        suggestion.innerHTML = "🔥 Excellent! You have very high chances. Apply immediately.";
+    } 
+    else if(score >= 60) {
+        suggestion.innerHTML = "👍 Good chances. Improve grooming and confidence for better results.";
+    } 
+    else {
+        suggestion.innerHTML = "⚡ Low chances. Focus on communication, confidence, and personality.";
+    }
+}
+</script>
+
+</body>
+</html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Profiles</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000, #0f172a);
+    color: #fff;
+}
+
+/* HEADER */
+header {
+    text-align: center;
+    padding: 30px;
+    border-bottom: 1px solid gold;
+}
+
+header h1 {
+    color: gold;
+    margin: 0;
+}
+
+/* GRID */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 30px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 18px;
+    padding: 25px;
+    border: 1px solid rgba(255,215,0,0.3);
+    backdrop-filter: blur(15px);
+    transition: 0.3s;
+    position: relative;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 25px gold;
+}
+
+/* NAME */
+.name {
+    font-size: 20px;
+    font-weight: bold;
+    color: gold;
+}
+
+/* DETAILS */
+.details {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #ccc;
+}
+
+/* ABOUT */
+.about {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* TAGS */
+.tags {
+    margin-top: 12px;
+}
+
+.tag {
+    display: inline-block;
+    background: rgba(255,215,0,0.2);
+    color: gold;
+    padding: 5px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    margin: 3px;
+}
+
+/* BUTTON */
+.btn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(45deg, gold, orange);
+    color: black;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px gold;
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+<h1>💎 Premium Companion Profiles</h1>
+<p>Luxury Experience • Verified Profiles</p>
+</header>
+
+<div class="container">
+<div class="grid">
+
+<!-- Profile 1 -->
+<div class="card">
+<div class="name">Aarav – Elite Gentleman</div>
+<div class="details">Age: 26 • Mumbai</div>
+<div class="about">Charming, confident, and refined personality. Perfect for luxury events and meaningful conversations.</div>
+<div class="tags">
+<span class="tag">Luxury</span>
+<span class="tag">Events</span>
+<span class="tag">Travel</span>
+</div>
+<a href="#" class="btn">Book Now</a>
+</div>
+
+<!-- Profile 2 -->
+<div class="card">
+<div class="name">Rohan – Friendly Charmer</div>
+<div class="details">Age: 24 • Delhi</div>
+<div class="about">Warm and friendly with a great sense of humor. Ideal for relaxed outings and enjoyable company.</div>
+<div class="tags">
+<span class="tag">Fun</span>
+<span class="tag">Casual</span>
+<span class="tag">Friendly</span>
+</div>
+<a href="#" class="btn">Book Now</a>
+</div>
+
+<!-- Profile 3 -->
+<div class="card">
+<div class="name">Kabir – Sophisticated</div>
+<div class="details">Age: 28 • Bengaluru</div>
+<div class="about">Professional, intelligent, and well-groomed. Best for business events and premium meetings.</div>
+<div class="tags">
+<span class="tag">Professional</span>
+<span class="tag">Premium</span>
+<span class="tag">Elegant</span>
+</div>
+<a href="#" class="btn">Book Now</a>
+</div>
+
+<!-- Profile 4 -->
+<div class="card">
+<div class="name">Arjun – Stylish Companion</div>
+<div class="details">Age: 25 • Hyderabad</div>
+<div class="about">Trendy, energetic, and confident. Perfect for nightlife and social appearances.</div>
+<div class="tags">
+<span class="tag">Trendy</span>
+<span class="tag">Party</span>
+<span class="tag">Social</span>
+</div>
+<a href="#" class="btn">Book Now</a>
+</div>
+
+<!-- Profile 5 -->
+<div class="card">
+<div class="name">Rahul – Calm Presence</div>
+<div class="details">Age: 27 • Pune</div>
+<div class="about">Calm, respectful, and understanding. Great for relaxed and meaningful time.</div>
+<div class="tags">
+<span class="tag">Relaxed</span>
+<span class="tag">Caring</span>
+<span class="tag">Trust</span>
+</div>
+<a href="#" class="btn">Book Now</a>
+</div>
+
+<!-- Profile 6 -->
+<div class="card">
+<div class="name">Vikram – Premium Expert</div>
+<div class="details">Age: 29 • Jaipur</div>
+<div class="about">Exclusive and high-standard personality offering a premium lifestyle experience.</div>
+<div class="tags">
+<span class="tag">VIP</span>
+<span class="tag">Exclusive</span>
+<span class="tag">Luxury</span>
+</div>
+<a href="#" class="btn">Book Now</a>
+</div>
+
+</div>
+</div>
+
+</body>
+</html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Reviews</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000, #0f172a);
+    color: #fff;
+}
+
+/* SECTION */
+.review-section {
+    max-width: 1000px;
+    margin: auto;
+    padding: 50px 20px;
+}
+
+.title {
+    text-align: center;
+    color: gold;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px,1fr));
+    gap: 20px;
+}
+
+/* CARD */
+.card {
+    background: rgba(255,255,255,0.05);
+    border-radius: 18px;
+    padding: 20px;
+    border: 1px solid rgba(255,215,0,0.3);
+    backdrop-filter: blur(12px);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 20px gold;
+}
+
+/* NAME */
+.name {
+    font-weight: bold;
+    color: gold;
+}
+
+/* STARS */
+.stars {
+    color: gold;
+    margin: 5px 0;
+    font-size: 18px;
+}
+
+/* TEXT */
+.text {
+    color: #ddd;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="review-section">
+
+<h2 class="title">⭐ Customer Reviews</h2>
+
+<div class="grid">
+
+<div class="card">
+<div class="name">Rahul S.</div>
+<div class="stars">★★★★★</div>
+<div class="text">Amazing experience! Very professional and smooth process. Highly recommended for anyone looking for premium service.</div>
+</div>
+
+<div class="card">
+<div class="name">Amit K.</div>
+<div class="stars">★★★★★</div>
+<div class="text">Excellent platform with genuine profiles. The experience was classy and well-managed from start to finish.</div>
+</div>
+
+<div class="card">
+<div class="name">Vikash R.</div>
+<div class="stars">★★★★★</div>
+<div class="text">Very impressed with the quality and professionalism. Everything felt safe, private, and premium.</div>
+</div>
+
+<div class="card">
+<div class="name">Sandeep M.</div>
+<div class="stars">★★★★★</div>
+<div class="text">Top-level service! Smooth communication and great overall experience. Will definitely use again.</div>
+</div>
+
+<div class="card">
+<div class="name">Karan P.</div>
+<div class="stars">★★★★★</div>
+<div class="text">Highly professional and trustworthy platform. The quality exceeded my expectations.</div>
+</div>
+
+</div>
+
+</section>
+
+</body>
+</html>
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Luxury Contact</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #000, #0f172a);
+    color: #fff;
+}
+
+/* SECTION */
+.contact-section {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 30px;
+    background: rgba(255,255,255,0.05);
+    border-radius: 20px;
+    border: 1px solid rgba(255,215,0,0.3);
+    backdrop-filter: blur(15px);
+    box-shadow: 0 0 25px rgba(255,215,0,0.3);
+}
+
+/* TITLE */
+.contact-title {
+    text-align: center;
+    font-size: 32px;
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.contact-subtitle {
+    text-align: center;
+    color: #aaa;
+    margin-bottom: 25px;
+}
+
+/* INPUT */
+.input-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #ddd;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    outline: none;
+    background: rgba(255,255,255,0.08);
+    color: #fff;
+    font-size: 14px;
+}
+
+textarea {
+    resize: none;
+    height: 100px;
+}
+
+/* BUTTON */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    background: linear-gradient(45deg, gold, orange);
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px gold;
+}
+
+/* SUCCESS */
+.success {
+    margin-top: 15px;
+    text-align: center;
+    color: lime;
+    display: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<section class="contact-section">
+
+<h2 class="contact-title">💎 Contact Us</h2>
+<p class="contact-subtitle">Get in touch for premium services</p>
+
+<form onsubmit="sendMsg(event)">
+
+<div class="input-group">
+<label>Your Name</label>
+<input type="text" required>
+</div>
+
+<div class="input-group">
+<label>Email Address</label>
+<input type="email" required>
+</div>
+
+<div class="input-group">
+<label>Phone Number</label>
+<input type="tel" required>
+</div>
+
+<div class="input-group">
+<label>Your Message</label>
+<textarea required></textarea>
+</div>
+
+<button type="submit">Send Message 🚀</button>
+
+</form>
+
+<div class="success" id="successMsg">
+✅ Message sent successfully!
+</div>
+
+</section>
+
+<script>
+function sendMsg(e){
+    e.preventDefault();
+    document.getElementById("successMsg").style.display = "block";
+}
+</script>
+
+</body>
+</html>
 <footer>
     © 2026 Luxury India UI | Designed for Premium Experience
 </footer>
