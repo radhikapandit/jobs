@@ -1978,31 +1978,125 @@ body {
 
 <body>
 
-<!-- POPUP -->
-<div class="popup" id="popup">
-    <div class="close" onclick="closePopup()">✖</div>
-    <h3>🔥 Limited Offer!</h3>
-    <p>Join our Telegram now & get instant access to premium updates.</p>
-    <a href="https://t.me/callboyjobyes" target="_blank">Join Now 🚀</a>
-</div>
-
-<!-- BUTTON -->
-<a href="https://t.me/callboyjobyes" target="_blank" class="telegram-btn">
+<!-- TELEGRAM BUTTON -->
+<a href="https://t.me/callboyjobyes" target="_blank" class="telegram-btn" onclick="trackClick()">
     ✈️ Join Telegram
 </a>
 
+<!-- POPUP -->
+<div class="telegram-popup" id="tgPopup">
+    <span class="close" onclick="closePopup()">✖</span>
+    <h3>🔥 Join Now!</h3>
+    <p>Get instant access to premium updates.</p>
+    <a href="https://t.me/callboyjobyes" target="_blank" onclick="trackClick()">Join Telegram 🚀</a>
+</div>
+
+<style>
+/* BUTTON */
+.telegram-btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    background: linear-gradient(45deg, #0088cc, #00aced);
+    color: white;
+    padding: 14px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    z-index: 999;
+    animation: pulse 2s infinite;
+    box-shadow: 0 0 15px rgba(0,136,204,0.7);
+    transition: 0.3s;
+}
+
+.telegram-btn:hover {
+    transform: scale(1.1);
+}
+
+/* PULSE ANIMATION */
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0,136,204,0.7); }
+    70% { box-shadow: 0 0 25px 15px rgba(0,136,204,0); }
+    100% { box-shadow: 0 0 0 0 rgba(0,136,204,0); }
+}
+
+/* POPUP */
+.telegram-popup {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    background: rgba(0,0,0,0.9);
+    border: 1px solid gold;
+    padding: 20px;
+    border-radius: 15px;
+    width: 260px;
+    display: none;
+    z-index: 998;
+    box-shadow: 0 0 20px gold;
+    animation: fadeIn 0.5s ease;
+}
+
+.telegram-popup h3 {
+    color: gold;
+    margin-bottom: 10px;
+}
+
+.telegram-popup p {
+    color: #ccc;
+    font-size: 14px;
+}
+
+.telegram-popup a {
+    display: block;
+    margin-top: 10px;
+    padding: 10px;
+    background: linear-gradient(45deg, gold, orange);
+    color: black;
+    text-align: center;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+    color: #aaa;
+}
+
+/* POPUP ANIMATION */
+@keyframes fadeIn {
+    from {opacity:0; transform: translateY(20px);}
+    to {opacity:1; transform: translateY(0);}
+}
+</style>
+
 <script>
-// Show popup after 5 sec
+// SHOW POPUP AFTER 5 SEC
 setTimeout(()=>{
-    document.getElementById("popup").style.display = "block";
+    document.getElementById("tgPopup").style.display = "block";
 },5000);
 
-// Close popup
+// CLOSE POPUP
 function closePopup(){
-    document.getElementById("popup").style.display = "none";
+    document.getElementById("tgPopup").style.display = "none";
+}
+
+// CLICK TRACKING (BASIC)
+function trackClick(){
+    console.log("Telegram button clicked");
+
+    // Google Analytics (if installed)
+    if(typeof gtag === "function"){
+        gtag('event', 'telegram_click', {
+            'event_category': 'CTA',
+            'event_label': 'Telegram Button'
+        });
+    }
 }
 </script>
-
 </body>
 </html>
 
